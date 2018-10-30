@@ -85,8 +85,49 @@ class InputForm extends Component {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+class New_Medication extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ndcNum: "",
+      rxNum: "",
+      pharmName: "",
+      doctorName: "",
+      drugName: "",
+      drugForm: "",
+      drugFormSizeAndMeasure: "",
+      currentQty: "",
+      bottleFullQty: "",
+      rxDiscard: "",
+      rxReorder: "",
+      drugDose: "",
+      drugFreq: "",
+      early: "",
+      middle: "",
+      late: ""
+
+    };
+    // console.log("state-early :" + this.state.early + "state-middle :" + this.state.middle + "state-late :" + this.state.late );
+
+    this.handleInputChange = this.handleInputChange.bind(this);
+
+  }
+
+
+
+    this.setState({
+      [name]: value
+    });
+    this.showState()
+  }
+  showState() {
+    console.log("state-early :" + this.state.early + "  state-middle :" + this.state.middle + "  state-late :" + this.state.late);
+  }
+>>>>>>> 5460cc173b069e797e905c7e3df3831e88137718
 
   render() {
     return (
@@ -175,9 +216,22 @@ class InputForm extends Component {
                 inputType="date"
                 placeholder="What is the re-order date?"
               />
+<<<<<<< HEAD
               
                 <p>What time(s) of day is it to be taken? (Check each that applies)</p>
                 <label>
+=======
+              <Input
+                title="How many to take in each dose"
+                value={this.state.drugDose}
+                onChange={this.handleInputChange}
+                name="drugDose"
+                inputType="number"
+                placeholder="How many in each dose?"
+              />
+              <p>What time(s) of day is it to be taken?</p>
+              <label>
+>>>>>>> 5460cc173b069e797e905c7e3df3831e88137718
                 <span className="form-padding">Morning</span>
                 <input
                   title="Take it mornings"
@@ -206,6 +260,7 @@ class InputForm extends Component {
               </label>
 
               <Button
+<<<<<<< HEAD
 
                       // onClick={this.handleFormSubmit}
                       action={this.handleFormSubmit}
@@ -215,12 +270,27 @@ class InputForm extends Component {
                     />
 
                     
+=======
+                className="button-padding"
+                action={this.handleFormSubmit}
+                type={"primary"}
+                title={"Submit"}
+
+              />
+>>>>>>> 5460cc173b069e797e905c7e3df3831e88137718
             </form>
 
           </Col>
         </Row>
       </Container>
+<<<<<<< HEAD
       
+=======
+
+
+
+
+>>>>>>> 5460cc173b069e797e905c7e3df3831e88137718
     );
   }
 }
