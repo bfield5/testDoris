@@ -5,9 +5,11 @@ const db = require("../models");
 // This file empties the Drugs collection and inserts the Drugs below
 
 mongoose.connect(
-    process.env.MONGODB_URI ||
+    process.env.MONGODB_URI, { useNewUrlParser: true } ||
     "mongodb://localhost/testDoris"
 );
+
+
 
 // mongoose.connect(
 //     "mongodb://localhost/dorisrx"
